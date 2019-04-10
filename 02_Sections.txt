@@ -1,0 +1,5 @@
+Section	ID	b	h	a	e	r	Weight	Area		Material
+[name]		[mm]	[mm]	[mm]	[mm]	[mm]	[kg/m]	[m^2]		[-]
+HEA100	1	100	96	5.0	8.0	12	16.7	21.24E-4	1
+HEA500	2	300	490	12	23	27	155	197.5E-4	1
+HEA600	3	300	590	13	25	27	178	226.5E-4	1

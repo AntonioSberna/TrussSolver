@@ -1,0 +1,3 @@
+ID	E	G	alpha
+[-]	[MPa]	[MPa]	[°C^-1]
+1	200E9	0	0

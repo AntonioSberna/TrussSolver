@@ -1,0 +1,4 @@
+ID_node	T_x	T_y	[1 if fixed]
+[NodeID][Traslations]
+1	1	1
+5	0	1

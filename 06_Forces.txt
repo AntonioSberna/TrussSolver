@@ -1,0 +1,4 @@
+ID_Node	F_x	F_y	[N]
+[Toward right and upward positive]
+3	1600E3  -1400E3
+4	0     -1400E3
