@@ -69,4 +69,17 @@ for i=1:length(temp)
     forces(:,i) = cell2mat(temp(i)); % ( ID , F_x , F_y )
 end
 clear i temp file
+
+
+
+
+%% Part 2 - Charateristic of each element
+
+[elements] = elementsProperty(elements,nodes, sections, materials);
+
+
+%% Part 3 - Original structure plot break
+
+orig_structural_plotter(nodes, restraints, forces, elements)
+uiwait
 end
