@@ -1,8 +1,5 @@
 function [nodes, d, restraints, forces, elements, sigma, disp, epsilon] = DisplmethSolver(materials, sections, nodes, elements, restraints, forces)
 
-
-
-
 %% Part 3 - Stiffness matrix
 
 K = zeros(size(nodes,1)*2);
@@ -156,5 +153,14 @@ for i = 1:size(elements,1)
    epsilon(i,2) = (L_def(i)-elements(i,5))/(elements(i,5));
    sigma(i,2) = elements(i,8) * epsilon(i,2)*(10^-6);
    
+   
+
+
+   
 end
 clear i c s
+
+
+ %% Part 4 - Output export
+
+txtexport(nodes,def,sigma,epsilon,f,elements)
