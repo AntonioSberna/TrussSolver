@@ -28,7 +28,9 @@ clc
 
 structural_plotter(nodes, d, restraints, forces, elements, sigma, disp, epsilon)
 
+%% Part 4 - Output export
 
+txtexport(nodes,def,sigma,epsilon,f,elements)
 
 
 

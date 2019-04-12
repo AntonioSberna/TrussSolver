@@ -46,9 +46,12 @@ hold on
 
 % Check boxes
         elem_label = uicontrol(p,'Style','checkbox','Value',1,...
-            'String','Elements n.','Callback',@elemlabel_Callback,'Units','normalized', 'Position', [.2 .7 .8 .25]);
+            'String','Elements n.','Callback',@elemlabel_Callback,'Units','normalized', 'Position', [.2 .75 .8 .25]);
         node_label = uicontrol(p,'Style','checkbox','Value',1,...
-            'String','Nodes n.','Callback',@nodelabel_Callback,'Units','normalized', 'Position', [.2 .25 .8 .25]);
+            'String','Nodes n.','Callback',@nodelabel_Callback,'Units','normalized', 'Position', [.2 .5 .8 .25]);
+%        section_label = uicontrol(p,'Style','checkbox','Value',1,...
+%            'String','Section type','Callback',@sectionlabel_Callback,'Units','normalized', 'Position', [.2 .25 .8 .25]);
+
 
 %% Non deformed shape
 % Non-deformed beams
@@ -102,6 +105,7 @@ for i = 1:size(elements,1)
     y(i) = (nodes(find(nodes(:,1) == elements(i,2),1),3) + nodes(find(nodes(:,1) == elements(i,3),1),3))/2 + magn_fact_y*cos(elements(i,5))/2;
 end
 t_elem_labels = text(x,y,num2str(elements(:,1)), 'HandleVisibility', 'off','Visible','on');
+%t_section_labels = text(x,y,num2str(elements(:,7)), 'HandleVisibility', 'off','Visible','on');
 
 
 
@@ -151,8 +155,18 @@ function nodelabel_Callback(hObject, eventdata, handles)
     end
 end
 
+% Checkbox section labels
+%function sectionlabel_Callback(hObject, eventdata, handles)
 
-% Push button to save the images
+%    if (get(hObject,'Value') == get(hObject,'Max'))
+%        set(t_section_labels,'Visible','on')
+%    else
+%        set(t_section_labels,'Visible','off');
+%    end
+%end
+
+
+% Push button to proceed the calculation
 push_counter = 1;
 function doitpushbutton_Callback(hObject,eventdata,handles)
     % Preparation to save

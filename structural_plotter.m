@@ -61,9 +61,9 @@ magn_fact_y = (y_max+y_min)/10;
     saveim_push = uicontrol(fig,'Style','pushbutton',...
         'String','Save Image','Callback',@saveimpushbutton_Callback,'Units','normalized', 'Position', [.21 .1 .08 .04]);
     saving = uicontrol(fig,'Style','text',...
-        'String','Saving...','Units','normalized', 'Position', [.25 .05 .1 .04],'Visible','off');
-    savetxt_push = uicontrol(fig,'Style','pushbutton',...
-        'String','Save Image','Callback',@savetxtpushbutton_Callback,'Units','normalized', 'Position', [.3 .1 .08 .04]);
+        'String','Saving...','Units','normalized', 'Position', [.21 .05 .1 .04],'Visible','off');
+%    savetxt_push = uicontrol(fig,'Style','pushbutton',...
+%        'String','Save Image','Callback',@savetxtpushbutton_Callback,'Units','normalized', 'Position', [.3 .1 .08 .04]);
 
 % Check boxes
         elem_label = uicontrol(p,'Style','checkbox','Value',0,...
@@ -313,23 +313,23 @@ end
 
 
 % Push button to save the images
-function savetxtpushbutton_Callback(hObject,eventdata,handles)
+%function savetxtpushbutton_Callback(hObject,eventdata,handles)
     % Preparation to save
-    set(p,'Visible','off')
-    set(saving,'Visible','on')
-    set(saving,'String','Saving results in txt file')
+%    set(p,'Visible','off')
+%    set(saving,'Visible','on')
+%    set(saving,'String','Saving results in txt file')
     
     % Save txt results file
-    txtexport(nodes,def,sigma,epsilon,f,elements)
+%    txtexport(nodes,def,sigma,epsilon,f,elements)
 
     % After save option
-    pause(0.5)
-    set(saving,'String','Done!')
-    pause(0.3)
-    set(saving,'Visible','off')
-    set(p,'Visible','on')
+%    pause(0.5)
+%    set(saving,'String','Done!')
+%    pause(0.3)
+%    set(saving,'Visible','off')
+%    set(p,'Visible','on')
 
-end
+%end
 
 
 
